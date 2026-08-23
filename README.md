@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="BalanceLoop" width="110" />
+<img src="assets/logo-icon.png" alt="BalanceLoop" width="104" />
 
 # BalanceLoop
 
@@ -13,6 +13,10 @@ and keep working when the network doesn't.
 [![Offline](https://img.shields.io/badge/offline-first-08584A)](#works-without-a-connection)
 [![Privacy](https://img.shields.io/badge/no%20ads-no%20tracking-50CDB7)](privacy-policy.html)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+<br />
+
+<img src="Slides/slide1.png" alt="BalanceLoop — split expenses with friends and groups, even offline" width="920" />
 
 </div>
 
@@ -40,6 +44,8 @@ each number instead of a total you have to trust.
 **Settle up honestly.** Recording a payment with another user asks them to confirm it, so
 a balance never changes because one side said so.
 
+<img src="Slides/slide2.png" alt="One ledger for everyone you split with — split it any way, even with non-users, settle honestly" width="100%" />
+
 > BalanceLoop records who paid whom. It does not move money and is not connected to any
 > payment provider — you settle up however you already do.
 
@@ -52,7 +58,7 @@ Most expense apps stop at the door of a restaurant with no signal. This one does
 - They **send themselves** the moment you are back online, in the order you made them
 - Nothing is double-counted if a sync is interrupted
 
-Add an expense on a plane; it lands when you do.
+<img src="Slides/slide3.png" alt="Add an expense on a plane — it syncs the moment you land" width="100%" />
 
 ## Also in the box
 
@@ -61,8 +67,11 @@ Add an expense on a plane; it lands when you do.
 | 🌍 **Three languages** | English, বাংলা, हिन्दी |
 | 🌓 **Light & dark** | Follows your preference, remembered between sessions |
 | 💱 **Multiple currencies** | Display your balances in the currency you think in |
+| 👥 **Groups** | Trips, flatmates, dinners — each with its own running balance |
 | 🔔 **Notifications** | Know when someone adds an expense or settles with you |
 | 📊 **Full history** | Every change to a balance is recorded and reviewable |
+
+<img src="Slides/slide4.png" alt="Built for how people actually split — languages, themes, currencies, groups, notifications, history" width="100%" />
 
 ## Privacy
 
@@ -74,6 +83,12 @@ Read the full [Privacy Policy](privacy-policy.html).
 ## Download
 
 Coming to Google Play. Watch this repo for the release.
+
+<div align="center">
+
+<img src="Slides/slide5.png" alt="Split expenses. Settle smart. Coming to Google Play" width="920" />
+
+</div>
 
 ## About this repository
 
