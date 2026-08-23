@@ -32,7 +32,10 @@
     font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  .deck{display:flex;flex-direction:column;gap:32px;padding:32px;align-items:center}
+  /* zoom (not transform) so the scaled deck still occupies real layout height */
+  .deck{display:flex;flex-direction:column;gap:32px;padding:32px;align-items:center;zoom:var(--s,1)}
+
+  .title-logo{width:62px;height:auto;display:block;margin:0 0 18px}
 
   .slide{
     width:1280px;height:720px;background:var(--canvas);
@@ -206,6 +209,63 @@
     font-weight:700;color:var(--text-3);letter-spacing:.04em;
   }
 
+
+  /* ============================================================
+     RESPONSIVE
+     Between ~900px and full width the whole 1280x720 deck is
+     zoomed down so the design stays intact. Below that, zooming
+     would make 19px body text render at ~6px, so the slides
+     become fluid, auto-height cards instead and the phone mock
+     drops below the copy rather than being clipped off-screen.
+     ============================================================ */
+  @media (max-width:900px){
+    .deck{zoom:1;gap:20px;padding:16px}
+    .slide{width:100%;height:auto;min-height:0;border-radius:12px}
+    .content{padding:30px 22px;height:auto}
+    .chrome .url{max-width:52vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+    .title-logo{width:52px;margin-bottom:14px}
+    h1{font-size:38px}
+    h2{font-size:27px}
+    .lead{font-size:16px;max-width:none}
+    .bullets div{font-size:14.5px}
+
+    /* Phone moves into the flow instead of being absolutely pinned */
+    /* relative, not static: .notch is absolutely positioned against it */
+    .phone{position:relative;right:auto;top:auto;margin:26px auto 0;width:250px;height:488px}
+
+    .meta{position:static;margin-top:24px;flex-wrap:wrap;gap:8px 18px}
+    .stamp{display:none}
+
+    .cards,.grid{grid-template-columns:1fr;gap:12px;margin-top:24px}
+    .card{padding:18px}
+    .card .ico{width:38px;height:38px;font-size:18px;margin-bottom:10px}
+    .card h3{font-size:16px}
+
+    .flow{flex-direction:column;margin-top:24px}
+    .arrow{width:auto;height:26px;transform:rotate(90deg)}
+    .offline-note{margin-top:22px;font-size:14px;padding:14px 16px}
+
+    .center{height:auto;padding:44px 24px}
+    .center h1{font-size:40px}
+    .center .lead{font-size:17px}
+    .cta-row{flex-direction:column;width:100%;max-width:320px;margin-top:28px}
+    .btn{justify-content:center;padding:14px 24px}
+    .logo-lg{width:66px;margin-bottom:20px}
+  }
+
+  @media (max-width:480px){
+    h1{font-size:31px}
+    h2{font-size:23px}
+    .center h1{font-size:33px}
+    .phone{width:216px;height:422px}
+    .content{padding:24px 18px}
+  }
+
+  @media print{
+    .deck{zoom:1}
+  }
+
   @media print{
     body{background:#fff}
     .deck{gap:0;padding:0}
@@ -223,6 +283,7 @@
       <span class="url">balanceloop.app</span>
     </div>
     <div class="content">
+      <img class="title-logo" src="assets/logo.png" alt="" />
       <div class="eyebrow">Shared expenses · Offline-first</div>
       <h1>Balance<span class="accent">Loop</span></h1>
       <p class="lead">
@@ -440,5 +501,20 @@
   </section>
 
 </div>
+
+<script>
+  // Scale the fixed 1280px deck down to the viewport. Below 900px the CSS
+  // above takes over with a fluid layout, so leave zoom alone there.
+  (function () {
+    var DECK_W = 1280, PAD = 64;
+    function fit() {
+      var w = document.documentElement.clientWidth;
+      var s = w <= 900 ? 1 : Math.min(1, (w - PAD) / DECK_W);
+      document.documentElement.style.setProperty('--s', s);
+    }
+    fit();
+    window.addEventListener('resize', fit, { passive: true });
+  })();
+</script>
 </body>
 </html>
