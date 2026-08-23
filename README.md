@@ -86,13 +86,15 @@ Built with React Native and Expo, on a PostgreSQL backend.
 
 ## Contact
 
-Questions, bug reports or press: **logarithmstudio1@gmail.com**
+Questions, bug reports or press: **contact@logarithmstudio.com**
 
 ---
 
 <div align="center">
 
-Made by **Logarithm Studio**
+Built by **Dewan Salman Rahman Zisan**
+
+under **Logarithm Studio**
 
 <sub>MIT licensed — see <a href="LICENSE">LICENSE</a></sub>
 
