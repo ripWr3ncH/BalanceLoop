@@ -95,8 +95,6 @@ Coming to Google Play. Watch this repo for the release.
 This is the **public home** for BalanceLoop — its documentation, privacy policy and
 release information.
 
-The application source code is kept in a private repository.
-
 Built with React Native and Expo, on a PostgreSQL backend.
 
 ## Contact
