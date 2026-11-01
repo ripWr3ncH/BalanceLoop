@@ -9,7 +9,7 @@
 Track shared expenses, lending and balances between friends and groups —
 and keep working when the network doesn't.
 
-[![Platform](https://img.shields.io/badge/Android-Google%20Play-3DDC84?logo=android&logoColor=white)]((https://play.google.com/store/apps/details?id=com.balanceloop.app))
+[![Platform](https://img.shields.io/badge/Android-Google%20Play-3DDC84?logo=android&logoColor=white)](https://play.google.com/store/apps/details?id=com.balanceloop.app)
 [![Offline](https://img.shields.io/badge/offline-first-08584A)](#works-without-a-connection)
 [![Privacy](https://img.shields.io/badge/no%20ads-no%20tracking-50CDB7)](privacy-policy.html)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -82,13 +82,19 @@ Read the full [Privacy Policy](privacy-policy.html).
 
 ## Download
 
-Download it from Google Play Store.
-
 <div align="center">
 
-<img src="Slides/slide5.png" alt="Split expenses. Settle smart. Coming to Google Play" width="920" />
+<a href="https://play.google.com/store/apps/details?id=com.balanceloop.app">
+  <img src="https://img.shields.io/badge/GET%20IT%20ON-Google%20Play-3DDC84?style=for-the-badge&logo=google-play&logoColor=white" alt="Get BalanceLoop on Google Play" />
+</a>
+
+<br /><br />
+
+<img src="Slides/slide5.png" alt="Split expenses. Settle smart. Available on Google Play" width="920" />
 
 </div>
+
+👉 **[Download BalanceLoop on Google Play](https://play.google.com/store/apps/details?id=com.balanceloop.app)**
 
 ## About this repository
 
